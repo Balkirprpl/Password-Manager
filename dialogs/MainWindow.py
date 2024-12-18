@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-import PassOrg, PassGen, PassStrength, configPage
+import dialogs.PassOrg, dialogs.PassGen, dialogs.PassStrength, dialogs.configPage
 
 class Ui_MainWindow(object):
     def __init__(self, MainWindow):
@@ -36,22 +36,22 @@ class Ui_MainWindow(object):
 
         def open_pass_manager():
             self.Dialog = QtWidgets.QWidget()
-            PassOrg.Ui_Dialog(self.Dialog)
+            dialogs.PassOrg.Ui_Dialog(self.Dialog)
             self.Dialog.show()
 
         def open_pass_generator():
             self.Dialog = QtWidgets.QWidget()
-            PassGen.Ui_Dialog(self.Dialog)
+            dialogs.PassGen.Ui_Dialog(self.Dialog)
             self.Dialog.show()
 
         def open_strength_checker():
             self.Dialog = QtWidgets.QWidget()
-            PassStrength.Ui_Dialog(self.Dialog)
+            dialogs.PassStrength.Ui_Dialog(self.Dialog)
             self.Dialog.show()
 
         def open_configurations():
             self.Dialog = QtWidgets.QWidget()
-            configPage.Ui_Dialog(self.Dialog)
+            dialogs.configPage.Ui_Dialog(self.Dialog)
             self.Dialog.show()
 
         self.pushButton.clicked.connect(open_pass_manager)

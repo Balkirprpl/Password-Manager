@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys, os
-import MainWindow
+import dialogs.MainWindow
 
 
 class Ui_Login(object):
@@ -37,7 +37,7 @@ class Ui_Login(object):
         self.gridLayout.addWidget(self.groupBox, 2, 0, 1, 1)
 
 
-                
+
 
         self.retranslateUi(Login)
         QtCore.QMetaObject.connectSlotsByName(Login)
@@ -72,7 +72,7 @@ if __name__ == "__main__":
         ui.f = open('./pin', 'r')
         if ui.lineEdit.text() == ui.f.readline():
             ui.new_window = QtWidgets.QMainWindow()
-            MainWindow.Ui_MainWindow(ui.new_window) 
+            dialogs.MainWindow.Ui_MainWindow(ui.new_window)
             ui.new_window.show()
             closewin(ui)
         else:
@@ -82,7 +82,7 @@ if __name__ == "__main__":
             msgBox.setWindowIcon(QtGui.QIcon('icon.png'))
             msgBox.exec()
 
-        
+
     exists = False
     app = QtWidgets.QApplication(sys.argv)
     Login = QtWidgets.QDialog()

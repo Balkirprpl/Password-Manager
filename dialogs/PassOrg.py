@@ -20,10 +20,6 @@ class Ui_Dialog(object):
             f.write(self.lineEdit_2.text() + ":" + self.lineEdit.text() + "#")
             self.dict[self.lineEdit_2.text()] = self.lineEdit.text()
             msgBox = QtWidgets.QMessageBox()
-            msgBox.setText('Password added')
-            msgBox.setWindowTitle(" ")
-            msgBox.setWindowIcon(QtGui.QIcon('icon.png'))
-            msgBox.exec()
             update_list()
 
         def update_list():

@@ -15,7 +15,7 @@ class Ui_Dialog(object):
         def export_data():
             x = subprocess.check_output('pwd', shell = True)
             x = x.decode('utf-8').split('/')
-            subprocess.run('cp ./passwords c:/Users/' + x[4] + "/desktop")
+            subprocess.run('cp ../passwords c:/Users/' + x[4] + "/desktop")
             msgBox = QtWidgets.QMessageBox()
             msgBox.setText('Exported passwords to the desktop')
             msgBox.setWindowTitle(" ")
